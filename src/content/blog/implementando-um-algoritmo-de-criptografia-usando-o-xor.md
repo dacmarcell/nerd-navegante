@@ -60,7 +60,7 @@ const str = "C";
 str.charCodeAt(0); // 67
 ```
 
-2. o operador `^` é o <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR'>bitwise xor</a> é responsável por fazer as operações seguindo a regra da porta lógica `exclusive or` retornando um bigint com o binário da string.
+2. o operador `^` é o <a target="_blank" href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR'>bitwise xor</a> é responsável por fazer as operações seguindo a regra da porta lógica `exclusive or` retornando um bigint com o binário da string.
 
 lembrete
 
