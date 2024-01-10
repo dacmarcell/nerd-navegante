@@ -96,7 +96,6 @@ export default function SearchBar({ searchList }: Props) {
           ref={inputRef}
         />
       </label>
-
       {inputVal.length > 1 && (
         <div className="mt-8">
           Found {searchResults?.length}
@@ -106,7 +105,6 @@ export default function SearchBar({ searchList }: Props) {
           for '{inputVal}'
         </div>
       )}
-
       <ul>
         {searchResults &&
           searchResults.map(({ item, refIndex }) => (
