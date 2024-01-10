@@ -9,9 +9,7 @@ tags:
   - next.js
   - api
   - back-end
-description:
-  "EXAMPLE POST: My experience about developing my first portfolio website and a blog
-  using NextJS and a headless CMS."
+description: "o next.js é um framework popular para o desenvolvimento web com react. ele suporta várias funcionalidades, incluindo..."
 ---
 
 o next.js é um framework popular para o desenvolvimento web com react. ele suporta várias funcionalidades, incluindo a criação de apis de maneira simples e eficiente.
