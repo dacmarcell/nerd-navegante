@@ -1,8 +1,8 @@
 ---
-author: Sat Naing
+author: dev marcell
 pubDatetime: 2022-09-26T12:13:24Z
 modDatetime: 2024-01-04T09:09:06Z
-title: Predefined color schemes
+title: predefined color schemes
 slug: predefined-color-schemes
 featured: false
 draft: false
