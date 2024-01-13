@@ -3,7 +3,7 @@ title: implementando um algoritmo de criptografia usando o xor
 author: dev marcell
 pubDatetime: 2024-01-10T02:45:42Z
 slug: implementando-um-algoritmo-de-criptografia-usando-o-xor
-featured: false
+featured: true
 draft: false
 tags:
   - criptografia
