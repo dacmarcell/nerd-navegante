@@ -1,6 +1,6 @@
 ---
 title: entendendo os object entries do javascript
-author: Dev Marcell
+author: dev marcell
 pubDatetime: 2024-01-10T01:08:42Z
 slug: entendendo-os-object-entries-do-javascript
 featured: false
