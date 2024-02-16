@@ -19,4 +19,4 @@
 
 ## Nerd Navegante - Nerd-Tech Blog
 
-My blog, which covers topics such as technology, programming, and data structures."
+My blog, which covers topics such as technology, programming, and data structures.
