@@ -8,7 +8,7 @@ draft: false
 tags:
   - deploy
   - nodejs
-description: o object.entries() é utilizado para conseguir informações de propriedades chave-valor. as enumera basicamente na mesma ordem do...
+description: olá. indo direto ao ponto, vamos precisar seguir os seguintes passos...
 ---
 
 ## como dar deploy em uma api
