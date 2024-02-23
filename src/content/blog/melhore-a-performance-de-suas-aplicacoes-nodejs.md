@@ -12,7 +12,7 @@ tags:
 description: 
 ---
 
-# Melhorando performances nas chamadas API em aplicações Node
+# Melhorando performance nas chamadas API em aplicações Node
 
 ![fetch using axios](../../assets/images/fetch_using_axios.png)
 
