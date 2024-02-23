@@ -9,7 +9,7 @@ tags:
   - nodejs
   - performance
   - back-end
-description: 
+description: Fiz testes reais em um cenário onde não utilizamos o ```Promise.All``` e obtive os seguintes números...
 ---
 
 # Melhorando performance nas chamadas API em aplicações Node
