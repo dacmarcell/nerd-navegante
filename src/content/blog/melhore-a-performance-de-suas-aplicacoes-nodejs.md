@@ -14,17 +14,17 @@ description: Fiz testes reais em um cenário onde não utilizamos o ```Promise.A
 
 # Melhorando performance nas chamadas API em aplicações Node
 
-![fetch using axios](../../assets/images/fetch_using_axios.png)
+![fetch using axios](/assets/images/fetch_using_axios.png)
 
-Fiz testes reais em um cenário onde não utilizamos o ```Promise.All``` e obtive os seguintes números:
+Fiz testes reais em um cenário onde não utilizamos o `Promise.All` e obtive os seguintes números:
 
 - 669.065ms
 - 651.111ms
 - 732.241ms
 
-em média obtemos __684.139ms__ para duas requisições. Sendo assim, __342.0695ms__ por requisição (em um cenário onde as duas levarão o mesmo tempo para executar)
+em média obtemos **684.139ms** para duas requisições. Sendo assim, **342.0695ms** por requisição (em um cenário onde as duas levarão o mesmo tempo para executar)
 
-![fetch using axios and promise all](../../assets/images/fetch_using_axios_and_promise_all.png)
+![fetch using axios and promise all](/assets/images/fetch_using_axios_and_promise_all.png)
 
 Da forma a seguir estamos utilizando o Promise.All do Javascript.
 Os testes deste lado obtiveram os seguintes valores:
@@ -33,4 +33,4 @@ Os testes deste lado obtiveram os seguintes valores:
 - 521.825ms
 - 538.736ms
 
-em média, __532.541ms__ para as duas e __266.270ms__ para uma requisição. Basicamente o promise.all recebe um array de promises e retorna uma promise ao final de todas as promises escritas. Como é retornada uma promise, também podemos utilizar o ```.then``` e/ou ```.catch()```.
+em média, **532.541ms** para as duas e **266.270ms** para uma requisição. Basicamente o promise.all recebe um array de promises e retorna uma promise ao final de todas as promises escritas. Como é retornada uma promise, também podemos utilizar o `.then` e/ou `.catch()`.
