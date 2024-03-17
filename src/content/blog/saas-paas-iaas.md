@@ -6,7 +6,7 @@ featured: false
 draft: false
 tags:
   - cloud
-description: "hoje exploraremos 3 conceitos fundamentais relacionados ao cloud: ..."
+description: entenda um pouco mais sobre o saas, paas e iaas
 ---
 
 hoje exploraremos 3 conceitos fundamentais relacionados ao cloud:
