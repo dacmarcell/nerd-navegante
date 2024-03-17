@@ -8,7 +8,7 @@ draft: false
 tags:
   - python
   - pytube
-description: o object.entries() é utilizado para conseguir informações de propriedades chave-valor. as enumera basicamente na mesma ordem do...
+description: aprenda a criar um baixador de vídeos do youtube com a linguagem python
 ---
 
 ## criando um downloader de vídeos do youTube com python
