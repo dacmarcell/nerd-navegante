@@ -3,7 +3,7 @@ title: melhore a performance de suas aplicacoes nodejs
 author: dev marcell
 pubDatetime: 2024-02-22T22:29:42Z
 slug: melhore-a-performance-de-suas-aplicacoes-nodejs
-featured: true
+featured: false
 draft: false
 tags:
   - javascript

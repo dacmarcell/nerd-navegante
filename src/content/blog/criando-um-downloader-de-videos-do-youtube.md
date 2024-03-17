@@ -3,7 +3,7 @@ title: criando um downloader de videos do youtube com python
 author: dev marcell
 pubDatetime: 2024-02-01T18:15:42Z
 slug: criando-um-downloader-de-videos-do-youtube-com-python
-featured: true
+featured: false
 draft: false
 tags:
   - python
