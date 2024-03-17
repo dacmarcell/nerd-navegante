@@ -6,9 +6,8 @@ slug: entendendo-os-object-entries-do-javascript
 featured: false
 draft: false
 tags:
-  - javaScript
-  - object entries
-  - array
+  - javascript
+  - estrutura-de-dados
 description: o object.entries() é utilizado para conseguir informações de propriedades chave-valor. as enumera basicamente na mesma ordem do...
 ---
 
