@@ -9,7 +9,7 @@ tags:
   - nodejs
   - performance
   - back-end
-description: Fiz testes reais em um cenário onde não utilizamos o ```Promise.All``` e obtive os seguintes números...
+description: entenda como melhorar a performance das suas aplicações js ou ts, com um pequeno truque com promises.
 ---
 
 # Melhorando performance nas chamadas API em aplicações Node
