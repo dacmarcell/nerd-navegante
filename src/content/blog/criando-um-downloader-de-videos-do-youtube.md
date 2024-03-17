@@ -7,7 +7,7 @@ featured: true
 draft: false
 tags:
   - python
-  - pytube
+  - utilidades
 description: aprenda a criar um baixador de vídeos do youtube com a linguagem python
 ---
 
