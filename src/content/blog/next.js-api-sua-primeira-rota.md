@@ -9,7 +9,7 @@ tags:
   - next.js
   - api
   - back-end
-description: "o next.js é um framework popular para o desenvolvimento web com react. ele suporta várias funcionalidades, incluindo..."
+description: entenda o funcionamento da api interna do framework back-end for front-end next.js
 ---
 
 o next.js é um framework popular para o desenvolvimento web com react. ele suporta várias funcionalidades, incluindo a criação de apis de maneira simples e eficiente.
