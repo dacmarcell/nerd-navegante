@@ -6,7 +6,7 @@ slug: melhore-a-performance-de-suas-aplicacoes-nodejs
 featured: true
 draft: false
 tags:
-  - nodejs
+  - javascript
   - performance
   - back-end
 description: entenda como melhorar a performance das suas aplicações js ou ts, com um pequeno truque com promises.
