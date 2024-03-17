@@ -6,8 +6,7 @@ slug: next.js-api-sua-primeira-rota
 featured: false
 draft: false
 tags:
-  - next.js
-  - api
+  - web
   - back-end
 description: entenda o funcionamento da api interna do framework back-end for front-end next.js
 ---
