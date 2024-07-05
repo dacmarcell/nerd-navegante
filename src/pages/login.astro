@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro"
+import LoginForm from '../components/LoginForm'
+import Header from '../components/Header.astro'
+---
+
+<Layout title="login">
+    <Header activeNav="login"/>
+    <LoginForm client:load />
+</Layout>
