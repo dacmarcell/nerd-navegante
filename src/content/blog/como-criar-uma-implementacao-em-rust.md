@@ -1,5 +1,5 @@
 ---
-title: como criar uma implementacao em rust 🦀
+title: aprenda sobre structs, traits e implementações 🦀
 author: devmarcell
 pubDatetime: 2024-07-04T21:54:42Z
 slug: como-criar-uma-implementacao-em-rust
@@ -8,7 +8,7 @@ draft: false
 tags:
   - rust
   - estrutura-de-dados
-description: veja o código de uma implementação utilizando traits, structs e impl.
+description: veja o código de uma implementação utilizando traits, structs e impl. e aprenda muito!
 ---
 
 Olá! vamos para mais um conteúdo de Rust?
@@ -86,7 +86,6 @@ fn main() {
 
 unit-like structs (unidades como structs)
 
-
 ```rust
 struct Electron {} // Use empty braces...
 struct Proton;     // ...or just a semicolon.
@@ -101,7 +100,7 @@ fn main() {
 
 implementação própria da [documentação](https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/structs.html#:~:text=Unit%2Dlike%20structs&text=Such%20a%20struct%20is%20called,features%2C%20it%20can%20become%20useful.) das unit-like structs. Perceba que existem duas formas de criar uma unit-like struct. Tanto com chaves, quanto sem chaves. Sua implementação segue o mesmo padrão, causando erro caso haja uma implementação não coerente com a forma de declaração.
 
-show de bola, acho que agora você já tem uma noção do que são structs e como elas funcionam no rust. A comparação com o typescript nesse caso é mais simples. Ela se parece com a estrutura `type` do ts. 
+show de bola, acho que agora você já tem uma noção do que são structs e como elas funcionam no rust. A comparação com o typescript nesse caso é mais simples. Ela se parece com a estrutura `type` do ts.
 
 agora vamos partir para o trait!
 
@@ -115,7 +114,7 @@ trait User {
     name: String,
     surname: String,
     age: u8
-} 
+}
 ```
 
 o **correto** nesse caso seria:
