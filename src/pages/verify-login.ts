@@ -10,7 +10,10 @@ export const POST: APIRoute = async ({ request, cookies }: APIContext) => {
     username !== "devmarcell" ||
     password !== "f12456145ae5b1f6489801e8bbfb99f8244c5546"
   ) {
-    return new Response("Unauthorized!", { status: 401 });
+    return new Response(
+      JSON.stringify({ message: "Unauthorized", success: false }),
+      { status: 401 }
+    );
   }
 
   const token: string = jwt.sign(
@@ -20,5 +23,8 @@ export const POST: APIRoute = async ({ request, cookies }: APIContext) => {
 
   cookies.set("token", token, { httpOnly: true, path: "/" });
 
-  return new Response(token, { status: 200 });
+  return new Response(
+    JSON.stringify({ message: "Authenticated", success: true }),
+    { status: 200 }
+  );
 };
