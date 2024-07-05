@@ -5,7 +5,7 @@ import LinkButton from "./LinkButton.astro";
 import SearchIcon from "./SearchIcon.astro";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "search";
+  activeNav?: "posts" | "tags" | "search" | "login";
 }
 
 const { activeNav } = Astro.props;
@@ -65,6 +65,9 @@ const { activeNav } = Astro.props;
             <a href="/tags" class={activeNav === "tags" ? "active" : ""}>
               tags
             </a>
+          </li>
+          <li>
+            <a href="/login" class={activeNav === "login" ? "active" : ""}>login</a>
           </li>
           <li>
             <LinkButton
