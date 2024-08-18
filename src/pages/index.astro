@@ -3,7 +3,6 @@ import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
@@ -15,7 +14,7 @@ const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
-const socialCount = SOCIALS.filter(social => social.active).length;
+const socialCount = SOCIALS.filter((social) => social.active).length;
 ---
 
 <Layout>
@@ -24,8 +23,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <section id="hero">
       <h1>nerd navegante</h1>
       <p>
-        nerd navegante, blog do dev <a id='social-link' href='https://developermarcell.vercel.app/' target='_blank'>@devmarcell</a>. por aqui você vê conteúdos sobre desenvolvimento de software e estrutura de dados. sinta-se a vontade. 
-      </p>      
+        nerd navegante, blog do dev <a
+          id="social-link"
+          href="https://developermarcell.vercel.app/"
+          target="_blank">@devmarcell</a
+        >. por aqui você vê conteúdos sobre desenvolvimento de software e
+        estrutura de dados. sinta-se a vontade.
+      </p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
@@ -58,44 +62,14 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </>
       )
     }
-
-    <section id="recent-posts">
-      <h2>recentes</h2>
-      <ul>
-        {
-          sortedPosts
-            .filter(({ data }) => !data.featured)
-            .map(
-              ({ data, slug }, index) =>
-                index < 4 && (
-                  <Card
-                    href={`/posts/${slug}`}
-                    frontmatter={data}
-                    secHeading={false}
-                  />
-                )
-            )
-        }
-      </ul>
-      <div class="all-posts-btn-wrapper">
-        <LinkButton href="/posts">
-          ver todos
-          <svg xmlns="http://www.w3.org/2000/svg"
-            ><path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            ></path>
-          </svg>
-        </LinkButton>
-      </div>
-    </section>
   </main>
 
   <Footer />
 </Layout>
 
 <style>
-  #social-link{
-    color: rgba(0, 0, 253, 0.594)
+  #social-link {
+    color: rgba(0, 0, 253, 0.594);
   }
   #hero {
     @apply pb-6 pt-8;
