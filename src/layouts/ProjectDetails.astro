@@ -14,7 +14,16 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const { author, pubDatetime, title, tags, description, ogImage } = post.data;
+const {
+  author,
+  pubDatetime,
+  title,
+  tags,
+  description,
+  ogImage,
+  githubURL,
+  deployURL,
+} = post.data;
 
 const { Content } = await post.render();
 
@@ -56,6 +65,21 @@ const layoutProps = {
       size="lg"
       className="my-2"
     />
+
+    <div>
+      <a href={githubURL} target="_blank" class="link"
+        >Acesse o projeto no github</a
+      >
+      <br />
+      {
+        deployURL && (
+          <a href={deployURL} target="_blank" class="link">
+            Acesse o site do projeto
+          </a>
+        )
+      }
+    </div>
+
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
@@ -91,6 +115,9 @@ const layoutProps = {
   }
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;
+  }
+  .link {
+    @apply text-skin-accent underline;
   }
 </style>
 
