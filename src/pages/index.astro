@@ -6,13 +6,17 @@ import Footer from "@components/Footer.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
-import getSortedPosts from "@utils/getSortedPosts";
+import getSortedPosts, { getSortedProjects } from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
 
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+
+const projects = await getCollection("project");
+const sortedProjects = getSortedProjects(projects);
+const featuredProjects = sortedProjects.filter(({ data }) => data.featured);
 
 const socialCount = SOCIALS.filter((social) => social.active).length;
 ---
@@ -52,13 +56,20 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
 
     <Hr />
 
-    <section id="featured">
-      <h2>projetos</h2>
-      <p>
-        Aqui você encontra alguns dos meus projetos de programação. Acesse o
-        repositório no GitHub para mais informações.
-      </p>
-    </section>
+    {
+      featuredProjects.length > 0 && (
+        <section id="featured">
+          <h2>projetos</h2>
+          {featuredProjects.map(({ data, slug }) => (
+            <Card
+              href={`/projects/${slug}`}
+              frontmatter={data}
+              secHeading={false}
+            />
+          ))}
+        </section>
+      )
+    }
 
     <Hr />
 
