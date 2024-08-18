@@ -25,7 +25,7 @@ const blog = defineCollection({
 
 const project = defineCollection({
   type: "content",
-  schema: () =>
+  schema: ({ image }) =>
     z.object({
       author: z.string().default(SITE.author),
       pubDatetime: z.date().default(new Date()),
@@ -36,6 +36,12 @@ const project = defineCollection({
       description: z.string(),
       githubURL: z.string(),
       deployURL: z.string().optional(),
+      ogImage: image()
+        .refine(img => img.width >= 1200 && img.height >= 630, {
+          message: "OpenGraph image must be at least 1200 X 630 pixels!",
+        })
+        .or(z.string())
+        .optional(),
     }),
 })
 
