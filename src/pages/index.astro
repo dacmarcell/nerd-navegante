@@ -8,6 +8,7 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts, { getSortedProjects } from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
+import Photo from "@components/Photo.astro";
 
 const posts = await getCollection("blog");
 
@@ -45,13 +46,16 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
     <Hr />
 
     <section id="featured">
+      <h2 class="about-me-title">sobre mim</h2>
+      <div class="about-me-grid">
         <Photo />
-      <p>
-        Marcell, cientista da computação em formação, desenvolvedor de software
-        back-end. Liderança do setor de desenvolvimento de software na empresa
-        Diamantes Consultoria. Trabalhando atualmente com a linguagem
-        Typescript.
-      </p>
+        <p>
+          Marcell, cientista da computação em formação, desenvolvedor de
+          software back-end. Liderança do setor de desenvolvimento de software
+          na empresa Diamantes Consultoria. Trabalhando atualmente com a
+          linguagem Typescript.
+        </p>
+      </div>
     </section>
 
     <Hr />
@@ -132,5 +136,12 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
+  }
+  .about-me-grid {
+    /* centralize image when is mobile */
+    @apply grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center;
+  }
+  .about-me-title {
+    @apply text-center text-2xl font-semibold mb-5 sm:text-3xl sm:items-center;
   }
 </style>
