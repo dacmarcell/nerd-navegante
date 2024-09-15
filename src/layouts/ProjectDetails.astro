@@ -30,7 +30,7 @@ const { Content } = await post.render();
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
   ogImageUrl ?? `/projects/${slugifyStr(title)}.png`,
-  Astro.url.origin,
+  Astro.url.origin
 ).href;
 
 const layoutProps = {
@@ -67,9 +67,13 @@ const layoutProps = {
     />
 
     <div>
-      <a href={githubURL} target="_blank" class="link"
-        >Acesse o projeto no github</a
-      >
+      {
+        githubURL && (
+          <a href={githubURL} target="_blank" class="link">
+            Acesse o projeto no github
+          </a>
+        )
+      }
       <br />
       {
         deployURL && (
