@@ -1,7 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 
-export const getSortedPosts = (posts: CollectionEntry<"blog">[]) => {
-  return posts
+export const getSortedPosts = (postagens: CollectionEntry<"blog">[]) => {
+  return postagens
     .filter(({ data }) => !data.draft)
     .sort(
       (a, b) =>
@@ -14,8 +14,16 @@ export const getSortedPosts = (posts: CollectionEntry<"blog">[]) => {
     );
 };
 
-export const getSortedProjects = (projects: CollectionEntry<"project">[]) => {
-  return projects.filter(({ data }) => !data.draft).sort();
-}
+// Pegar projetos sorteados por título
+//
+// Retorna um array de projetos que não estão marcados
+// como RASCUNHO e ordenados alfabeticamente por título
+export const getSortedProjects = (projetos: CollectionEntry<"project">[]) => {
+  return projetos
+    .filter(({ data }) => !data.draft)
+    .sort((a, b) => {
+      return a.data.title.localeCompare(b.data.title);
+    });
+};
 
 export default getSortedPosts;
