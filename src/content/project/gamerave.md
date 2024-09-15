@@ -1,8 +1,8 @@
 ---
 title: "gamerave"
-featured: true
+featured: false
 draft: false
-tags: 
+tags:
   - docker
   - express
   - typescript
