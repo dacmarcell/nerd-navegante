@@ -34,7 +34,7 @@ const project = defineCollection({
       draft: z.boolean().optional(),
       tags: z.array(z.string()).default(["others"]),
       description: z.string(),
-      githubURL: z.string(),
+      githubURL: z.string().optional(),
       deployURL: z.string().optional(),
       ogImage: image()
         .refine(img => img.width >= 1200 && img.height >= 630, {
