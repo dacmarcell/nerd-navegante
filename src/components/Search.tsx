@@ -11,7 +11,7 @@ export type SearchItem = {
 };
 
 interface Props {
-  searchList: SearchItem[];
+  readonly searchList: SearchItem[];
 }
 
 interface SearchResult {
@@ -51,7 +51,7 @@ export default function SearchBar({ searchList }: Props) {
     // put focus cursor at the end of the string
     setTimeout(function () {
       inputRef.current!.selectionStart = inputRef.current!.selectionEnd =
-        searchStr?.length || 0;
+        searchStr?.length ?? 0;
     }, 50);
   }, []);
 
@@ -106,14 +106,13 @@ export default function SearchBar({ searchList }: Props) {
         </div>
       )}
       <ul>
-        {searchResults &&
-          searchResults.map(({ item, refIndex }) => (
-            <Card
-              href={`/posts/${item.slug}`}
-              frontmatter={item.data}
-              key={`${refIndex}-${item.slug}`}
-            />
-          ))}
+        {searchResults?.map(({ item, refIndex }) => (
+          <Card
+            href={`/posts/${item.slug}`}
+            frontmatter={item.data}
+            key={`${refIndex}-${item.slug}`}
+          />
+        ))}
       </ul>
     </>
   );
