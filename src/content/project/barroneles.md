@@ -1,5 +1,5 @@
 ---
-title: "site de campanha barro neles"
+title: "barro neles"
 featured: true
 draft: false
 tags:
